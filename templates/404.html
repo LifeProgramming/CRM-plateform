@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            /* Light background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .error-title {
+            font-size: 72px;
+            color: #333;
+            /* Dark text color */
+            margin: 0;
+        }
+
+        .error-message {
+            font-size: 24px;
+            color: #555;
+            /* Slightly lighter text color */
+            margin: 20px 0;
+        }
+
+        .btn-home {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: #007bff;
+            /* Blue background for home button */
+            color: #fff;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .btn-home:hover {
+            background-color: #0056b3;
+            /* Darker blue on hover */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="error-title">404</h1>
+        <p class="error-message">Oops! The page you are looking for cannot be found.</p>
+        <a href="{% url 'records'%}" class="btn-home">Go to Home</a>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+{% extends 'core/core.html' %}
+{% load static%}
+
+{% block title%}
+Record Detail
+{% endblock%}
+
+{% block css_file%}
+<link rel="stylesheet" href="{% static 'record.css' %}">
+{% endblock%}
+{% block body%}
+
+<div class="container">
+    <h2 class="page-title">Record Details</h2>
+    <div class="detail-item"><strong>Name:</strong> {{record.name}}</div>
+    <div class="detail-item"><strong>Email:</strong> {{record.email}}</div>
+    <div class="detail-item"><strong>Phone Number:</strong> {{record.phone}}</div>
+    <div class="detail-item"><strong>Address:</strong> {{record.address}}</div>
+    <div class="detail-item"><strong>City:</strong> {{record.city}}</div>
+    <div class="detail-item"><strong>State:</strong> {{record.state}}</div>
+    <div class="detail-item"><strong>Zip Code:</strong> {{record.zipcode}}</div>
+    <div class="detail-item"><strong>Created At:</strong> {{record.created_at}}</div>
+    <a href="{{ request.META.HTTP_REFERER|default:'/' }}" class="btn btn-back">Back To Records</a>
+    {% if request.user == record.creator%}
+    <a href="{% url 'delete-record' record.id %}" class="btn btn-delete">Delete Record</a>
+    <a href="{% url 'edit-record' record.id %}" class="btn btn-edit">Edit</a>
+    {% endif %}
+</div>
+{% endblock %}

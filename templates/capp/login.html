@@ -1,0 +1,31 @@
+{% extends 'core/core.html' %}
+{% load static%}
+
+{% block title%}
+Login
+{% endblock%}
+
+{% block css_file%}
+<link rel="stylesheet" href="{% static 'login.css' %}">
+{% endblock%}
+{% block body%}
+
+<div class="container">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <h2>Login</h2>
+        {% for field in form%}
+        <label for=""></label>
+        <label for="">Enter your {{field.label}}</label>
+        <br>
+        {{field}}
+        <br>
+        {% endfor%}
+        <button class="btn">Login</button>
+        <div class="links">
+            <a href="{% url 'signup'%}">Do'nt have a account?</a>
+            <a href="#">Forgot Password?</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

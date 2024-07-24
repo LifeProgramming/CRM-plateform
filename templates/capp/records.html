@@ -1,0 +1,74 @@
+{% extends 'core/core.html' %}
+{% load static%}
+
+{% block title%}
+Records List
+{% endblock%}
+
+{% block css_file%}
+<link rel="stylesheet" href="{% static 'records.css' %}">
+{% endblock%}
+{% block body%}
+
+{% if records%}
+<div class="container">
+    <h2>Records</h2>
+    <table class="records-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Zip Code</th>
+                <th>Created At</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Sample data, replace with actual customer records -->
+            {% for record in records%}
+            <tr>
+                <td><a href="{% url 'record-detail' record.id %}" class="record-link">{{record.name}}</a></td>
+                <td>{{record.email}}</td>
+                <td>{{record.phone}}</td>
+                <td>{{record.address}}</td>
+                <td>{{record.city}}</td>
+                <td>{{record.state}}</td>
+                <td>{{record.zipcode}}</td>
+                <td>{{record.created_at}}</td>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+</div>
+<br>
+
+<div class="container">
+    <!-- Content goes here -->
+
+    <!-- Pagination -->
+    <div class="pagination">
+        {% if page_obj.has_previous%}
+        <a href="?page={{ page_obj.previous_page_number }}" class="disabled">Previous</a>
+        {% endif%}
+        <a href="#" class="active">Page {{ page_obj.number }} Of {{ page_obj.paginator.num_pages }}</a>
+        {% if page_obj.has_next%}
+        <a href="?page={{ page_obj.next_page_number }}">Next</a>
+        {% endif%}
+    </div>
+</div>
+{% else%}
+<div class="container2">
+    <!-- Banner -->
+    <div class="banner">
+        <h2>No Records Available</h2>
+        <p>It looks like you don't have any records yet. Start adding new records to manage your customers
+            effectively.</p>
+        <a href="{% url 'add-record'%}" class="btn-add-record">Add Record</a>
+    </div>
+</div>
+{% endif%}
+{% endblock %}

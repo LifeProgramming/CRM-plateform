@@ -1,0 +1,174 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    /* Light background */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 40px;
+    /* Increased padding for better spacing */
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    text-align: center;
+}
+
+/* Title style */
+h2 {
+    margin-bottom: 20px;
+    /* Added margin for title */
+}
+
+/* Input field styles */
+
+input[name='username'],
+input[name="password"],
+input[name="password1"],
+input[type='text'],
+input[name="password2"] {
+    width: 100%;
+    padding: 15px;
+    /* Increased padding for comfortability */
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    /* Consistent font size */
+}
+
+/* Button styles */
+.btn {
+    padding: 12px 20px;
+    /* Adjusted padding for better proportion */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 15px 0;
+    /* Increased margin for spacing */
+    background-color: #007bff;
+    /* Blue background for login button */
+    color: #fff;
+    display: inline-block;
+    transition: 0.4s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+}
+
+/* Link styles */
+.links {
+    margin-top: 10px;
+    /* Reduced margin for compactness */
+}
+
+.links a {
+    color: #007bff;
+    /* Blue color for links */
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #f5f5f5;
+    /* Light background */
+    color: #333;
+    /* Dark text */
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+}
+
+/* Title style */
+.navbar-brand {
+    font-size: 20px;
+    /* Adjust font size based on preference */
+    font-weight: bold;
+    /* Bold for emphasis */
+}
+
+/* Link style */
+.navbar-links a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: color 0.2s ease-in-out;
+    /* Smooth hover effect */
+}
+
+.navbar-links a:hover {
+    color: #007bff;
+    /* Blue on hover for better feedback */
+}
+
+/* Search box style */
+.search-container {
+    display: none;
+    align-items: center;
+}
+
+.search-box {
+    border: 1px solid #ccc;
+    /* Light border for better visibility */
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    /* White background */
+}
+
+.search-button {
+    background-color: #007bff;
+    /* Blue button color */
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.2s ease-in-out;
+    /* Smooth hover effect */
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.alert {
+    width: 300px;
+    height: 50px;
+    border: rgb(212, 144, 144);
+    border-radius: 9px;
+    background-color: rgb(219, 160, 160);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 40px;
+}

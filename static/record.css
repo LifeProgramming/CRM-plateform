@@ -1,0 +1,159 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    /* Light background */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+}
+
+/* Title style */
+.page-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Detail item style */
+.detail-item {
+    margin-bottom: 15px;
+    display: flex;
+    /* Use flexbox for better layout */
+    align-items: center;
+}
+
+.detail-item strong {
+    flex: 1;
+    /* Label takes up more space */
+    margin-right: 10px;
+    /* Spacing between label and value */
+    font-weight: bold;
+}
+
+/* Button styles */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+    /* Consistent spacing between buttons */
+}
+
+.btn-back {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.btn-edit {
+    background-color: #28a745;
+    color: #fff;
+}
+
+/* Color contrast improvement (optional) */
+.btn-delete {
+    /* Consider a lighter text color for better contrast on red background */
+    color: #f5f5f5;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #f5f5f5;
+    /* Light background */
+    color: #333;
+    /* Dark text */
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+}
+
+/* Title style */
+.navbar-brand {
+    font-size: 20px;
+    /* Adjust font size based on preference */
+    font-weight: bold;
+    /* Bold for emphasis */
+}
+
+/* Link style */
+.navbar-links a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: color 0.2s ease-in-out;
+    /* Smooth hover effect */
+}
+
+.navbar-links a:hover {
+    color: #007bff;
+    /* Blue on hover for better feedback */
+}
+
+/* Search box style */
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-box {
+    border: 1px solid #ccc;
+    /* Light border for better visibility */
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    /* White background */
+}
+
+.search-button {
+    background-color: #007bff;
+    /* Blue button color */
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.2s ease-in-out;
+    /* Smooth hover effect */
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    text-align: center;
+}

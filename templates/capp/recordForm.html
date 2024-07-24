@@ -1,0 +1,25 @@
+{% extends 'core/core.html' %}
+{% load static%}
+
+{% block title%}
+Add Record
+{% endblock%}
+
+{% block css_file%}
+<link rel="stylesheet" href="{% static 'login.css' %}">
+{% endblock%}
+{% block body%}
+
+<div class="container">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <h2>Add Record</h2>
+        {% for field in form%}
+        <br>
+        {{field}}
+        <br>
+        {% endfor%}
+        <button class="btn">Add</button>
+    </form>
+</div>
+{% endblock %}
